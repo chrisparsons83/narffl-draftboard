@@ -1,0 +1,38 @@
+body {
+  padding: 50px;
+  font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+.table thead th {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.table tbody tr td.position {
+  padding: 0;
+  text-align: center;
+}
+.table tbody tr td.position .player-name {
+  padding: 15px 0;
+  font-weight: bold;
+}
+.position-WR {
+  background-color: #ddebf7;
+}
+.position-RB {
+  background-color: #e2efda;
+}
+.position-TE {
+  background-color: #fff2cc;
+}
+.position-QB {
+  background-color: #ffd9d9;
+}
+.position-K {
+  background-color: #f8cbad;
+}
+.position-DST {
+  background-color: #dac2ec;
+}
