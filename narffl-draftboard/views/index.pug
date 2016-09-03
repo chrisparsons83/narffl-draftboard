@@ -1,5 +1,10 @@
 ﻿extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .jumbotron
+    h1= title
+    p Paste a link to your Fleaflicker league or draft page in the input box below, and get a visual draftboard of your completed draft.
+    form(method='post')
+      .form-group
+        input(type='text', class='form-control', name='fleaflickerUrl', placeholder='Enter in the form of http://www.fleaflicker.com/nfl/league/xxxxxx')
+      button(type='submit', class='btn btn-default') View Draftboard

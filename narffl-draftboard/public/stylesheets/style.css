@@ -5,34 +5,102 @@ body {
 a {
   color: #00b7ff;
 }
+.jumbotron {
+  text-align: center;
+  margin-top: 3em;
+}
+.jumbotron p {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+.jumbotron .form-control {
+  width: 50%;
+  margin: 0 auto;
+}
 .table thead th {
+  width: 2%;
+}
+.table thead th.header {
   font-size: 14px;
   font-weight: bold;
   text-align: center;
+  padding: 0;
+  width: 8%;
+  border: 1px solid #888 !important;
+}
+.table tbody tr td {
+  width: 2%;
+  border: 1px solid #888;
 }
 .table tbody tr td.position {
-  padding: 0;
+  position: relative;
+  width: 8%;
+  font-size: 11px;
+  padding: 0 0 35px;
   text-align: center;
 }
 .table tbody tr td.position .player-name {
-  padding: 15px 0;
+  padding: 15px 3px 0;
+  height: 45px;
+  overflow: hidden;
   font-weight: bold;
+}
+.table tbody tr td.position .position {
+  font-weight: bold;
+}
+.table tbody tr td.position .team {
+  color: #666;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: 9px;
 }
 .position-WR {
   background-color: #ddebf7;
 }
+.position-WR .position {
+  background-color: #94bee4;
+  border-bottom: 1px solid #27508c;
+  color: #27508c;
+}
 .position-RB {
   background-color: #e2efda;
+}
+.position-RB .position {
+  background-color: #a9d08e;
+  border-bottom: 1px solid #32611c;
+  color: #32611c;
 }
 .position-TE {
   background-color: #fff2cc;
 }
+.position-TE .position {
+  background-color: #ffd966;
+  border-bottom: 1px solid #584504;
+  color: #584504;
+}
 .position-QB {
   background-color: #ffd9d9;
+}
+.position-QB .position {
+  background-color: #ff8181;
+  border-bottom: 1px solid #aa1010;
+  color: #aa1010;
 }
 .position-K {
   background-color: #f8cbad;
 }
+.position-K .position {
+  background-color: #f4b084;
+  border-bottom: 1px solid #c7623c;
+  color: #c7623c;
+}
 .position-DST {
   background-color: #dac2ec;
+}
+.position-DST .position {
+  background-color: #c7a1e3;
+  border-bottom: 1px solid #7e39a4;
+  color: #7e39a4;
 }

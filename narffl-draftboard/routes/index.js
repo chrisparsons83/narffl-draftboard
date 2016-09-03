@@ -1,10 +1,20 @@
 ﻿var express = require('express');
 var router = express.Router();
 var flea = require('flea-killer');
+var urlapi = require('url');
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Fleaflicker Draft Board' });
+});
+router.post('/', function (req, res) {
+  var url = urlapi.parse(req.body.fleaflickerUrl);
+  var pathArray = url.path.split('/');
+  if (pathArray[3].match(/^[0-9]+$/) == null) {
+    res.status(500).send('Please use a URL in the format http://www.fleaflicker.com/nfl/leagues/xxxxxx/drafts where xxxxxx is your league number');
+  }
+
+  res.redirect(303, '/nfl/leagues/' + pathArray[3] + '/drafts');
 });
 router.get('/nfl/leagues/:leagueid/drafts', function (req, res) {
     var leagueId = req.params.leagueid;
